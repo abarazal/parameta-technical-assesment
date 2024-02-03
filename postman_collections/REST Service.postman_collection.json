@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "c09996d0-8b44-45d7-bec8-57ffbfe915f7",
+		"name": "REST Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9311383",
+		"_collection_link": "https://www.postman.com/maquinoladevs/workspace/parameta/collection/9311383-c09996d0-8b44-45d7-bec8-57ffbfe915f7?action=share&source=collection_link&creator=9311383"
+	},
+	"item": [
+		{
+			"name": "Create employee",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{rest_url}}/api/employee?first_names=Juan Manuel&last_names=Gómez&document_type=DNI&document_number=30802413&birth_date=2001-10-02&hire_date=2024-01-02&position=Software Developer&salary=6000",
+					"host": [
+						"{{rest_url}}"
+					],
+					"path": [
+						"api",
+						"employee"
+					],
+					"query": [
+						{
+							"key": "first_names",
+							"value": "Juan Manuel"
+						},
+						{
+							"key": "last_names",
+							"value": "Gómez"
+						},
+						{
+							"key": "document_type",
+							"value": "DNI"
+						},
+						{
+							"key": "document_number",
+							"value": "30802413"
+						},
+						{
+							"key": "birth_date",
+							"value": "2001-10-02"
+						},
+						{
+							"key": "hire_date",
+							"value": "2024-01-02"
+						},
+						{
+							"key": "position",
+							"value": "Software Developer"
+						},
+						{
+							"key": "salary",
+							"value": "6000"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Employee created",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{rest_url}}/api/employee?first_names=Juan Manuel&last_names=Gómez&document_type=DNI&document_number=30802413&birth_date=2001-10-02&hire_date=2024-01-02&position=Software Developer&salary=6000",
+							"host": [
+								"{{rest_url}}"
+							],
+							"path": [
+								"api",
+								"employee"
+							],
+							"query": [
+								{
+									"key": "first_names",
+									"value": "Juan Manuel"
+								},
+								{
+									"key": "last_names",
+									"value": "Gómez"
+								},
+								{
+									"key": "document_type",
+									"value": "DNI"
+								},
+								{
+									"key": "document_number",
+									"value": "30802413"
+								},
+								{
+									"key": "birth_date",
+									"value": "2001-10-02"
+								},
+								{
+									"key": "hire_date",
+									"value": "2024-01-02"
+								},
+								{
+									"key": "position",
+									"value": "Software Developer"
+								},
+								{
+									"key": "salary",
+									"value": "6000"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 03 Feb 2024 22:47:45 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 20,\n    \"first_names\": \"Juan Manuel\",\n    \"last_names\": \"Gómez\",\n    \"document_type\": \"DNI\",\n    \"document_number\": 30802413,\n    \"birth_date\": \"2001-10-02\",\n    \"hire_date\": \"2024-01-02\",\n    \"position\": \"Software Developer\",\n    \"salary\": 6000,\n    \"employment_period\": {\n        \"year\": 0,\n        \"month\": 1,\n        \"days\": 1\n    },\n    \"current_age\": {\n        \"year\": 22,\n        \"month\": 4,\n        \"days\": 1\n    }\n}"
+				}
+			]
+		}
+	]
+}

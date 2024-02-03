@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "29ad7414-617d-40b4-9ba9-e75fdaa9d15d",
+		"name": "SOAP Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9311383",
+		"_collection_link": "https://www.postman.com/maquinoladevs/workspace/parameta/collection/9311383-29ad7414-617d-40b4-9ba9-e75fdaa9d15d?action=share&source=collection_link&creator=9311383"
+	},
+	"item": [
+		{
+			"name": "Create Employee",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					},
+					{
+						"key": "SOAPAction",
+						"value": "\"#createEmployeeRequest\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\n                  xmlns:xs=\"http://parameta.co/web/assesment/employees\">\n    <soapenv:Header/>\n    <soapenv:Body>\n        <xs:createEmployeeRequest>\n            <xs:employee>\n                <xs:firstNames>Roberto Carlos</xs:firstNames>\n                <xs:lastNames>Gómez Justiniano</xs:lastNames>\n                <xs:documentType>DNI</xs:documentType>\n                <xs:documentNumber>18564789</xs:documentNumber>\n                <xs:birthDate>1976-11-06</xs:birthDate>\n                <xs:hireDate>2000-06-21</xs:hireDate>\n                <xs:position>Account Manager</xs:position>\n                <xs:salary>7800</xs:salary>\n            </xs:employee>\n        </xs:createEmployeeRequest>\n    </soapenv:Body>\n</soapenv:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{soap_url}}/ws",
+					"host": [
+						"{{soap_url}}"
+					],
+					"path": [
+						"ws"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Employee created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							},
+							{
+								"key": "SOAPAction",
+								"value": "\"#createEmployeeRequest\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\n                  xmlns:xs=\"http://parameta.co/web/assesment/employees\">\n    <soapenv:Header/>\n    <soapenv:Body>\n        <xs:createEmployeeRequest>\n            <xs:employee>\n                <xs:firstNames>Roberto Carlos</xs:firstNames>\n                <xs:lastNames>Gómez Justiniano</xs:lastNames>\n                <xs:documentType>DNI</xs:documentType>\n                <xs:documentNumber>18564789</xs:documentNumber>\n                <xs:birthDate>1976-11-06</xs:birthDate>\n                <xs:hireDate>2000-06-21</xs:hireDate>\n                <xs:position>Account Manager</xs:position>\n                <xs:salary>7800</xs:salary>\n            </xs:employee>\n        </xs:createEmployeeRequest>\n    </soapenv:Body>\n</soapenv:Envelope>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{soap_url}}/ws",
+							"host": [
+								"{{soap_url}}"
+							],
+							"path": [
+								"ws"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Accept",
+							"value": "text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2"
+						},
+						{
+							"key": "SOAPAction",
+							"value": "\"\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/xml;charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "646"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 03 Feb 2024 22:39:56 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <SOAP-ENV:Header/>\n    <SOAP-ENV:Body>\n        <ns2:createEmployeeResponse xmlns:ns2=\"http://parameta.co/web/assesment/employees\">\n            <ns2:employee>\n                <ns2:id>18</ns2:id>\n                <ns2:firstNames>Roberto Carlos</ns2:firstNames>\n                <ns2:lastNames>Gómez Justiniano</ns2:lastNames>\n                <ns2:documentType>DNI</ns2:documentType>\n                <ns2:documentNumber>18564789</ns2:documentNumber>\n                <ns2:birthDate>1976-11-06</ns2:birthDate>\n                <ns2:hireDate>2000-06-21</ns2:hireDate>\n                <ns2:position>Account Manager</ns2:position>\n                <ns2:salary>7800.0</ns2:salary>\n            </ns2:employee>\n        </ns2:createEmployeeResponse>\n    </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+				}
+			]
+		}
+	]
+}
