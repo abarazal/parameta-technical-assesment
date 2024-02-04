@@ -81,9 +81,7 @@
                 </executions>
                 <configuration>
                     <packageName>co.parameta.parametaapirest.wsdl</packageName>
-                    <wsdlUrls>
-                        <wsdlUrl>http://localhost:8080/ws/employees.wsdl</wsdlUrl>
-                    </wsdlUrls>
+                    <wsdlDirectory>${project.basedir}/src/main/resources/wsdl</wsdlDirectory>
                     <sourceDestDir>${sourcesDir}</sourceDestDir>
                     <destDir>${classesDir}</destDir>
                     <extension>true</extension>
